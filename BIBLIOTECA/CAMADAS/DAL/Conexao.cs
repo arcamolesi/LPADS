@@ -11,8 +11,7 @@ namespace BIBLIOTECA.CAMADAS.DAL
     {
         public static string getConexao()
         {
-            
-            return @"Data Source=.\SQLEXPRESS;Initial Catalog=BIBLIOTECA2020;Integrated Security=True"; 
+            return @"Data Source=.\sqlexpress;Initial Catalog=BIBLIOTECA2020;Integrated Security=True"; 
         }
     }
 }

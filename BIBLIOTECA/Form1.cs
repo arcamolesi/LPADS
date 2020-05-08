@@ -19,9 +19,8 @@ namespace BIBLIOTECA
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CAMADAS.MODEL.Clientes cliente = new CAMADAS.MODEL.Clientes();
-            cliente.nome = "Almir";
-            MessageBox.Show(cliente.nome); 
+            CAMADAS.DAL.Clientes dalCli = new CAMADAS.DAL.Clientes();
+            dataGridView1.DataSource = dalCli.Select(); 
 
         }
     }
