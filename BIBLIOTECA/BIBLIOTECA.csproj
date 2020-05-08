@@ -84,5 +84,8 @@
   <ItemGroup>
     <Folder Include="CAMADAS\BLL\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="CAMADAS\DAL\Biblioteca.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
