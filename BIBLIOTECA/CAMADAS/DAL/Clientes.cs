@@ -14,6 +14,7 @@ namespace BIBLIOTECA.CAMADAS.DAL
         
         private string strCon = Conexao.getConexao(); 
 
+        //Método para recuperar Dados da Tabela de Clientes
         public List<MODEL.Clientes> Select()
         {
             List<MODEL.Clientes> lstClientes = new List<MODEL.Clientes>(); 
@@ -45,5 +46,87 @@ namespace BIBLIOTECA.CAMADAS.DAL
 
             return lstClientes; 
         }
+
+        //Método para Inserir dados na tabela de clientes
+        public void Insert (MODEL.Clientes cliente)
+        {
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "INSERT INTO Clientes VALUES (@nome, @curso, @dias, @multa);";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@nome", cliente.nome);
+            cmd.Parameters.AddWithValue("@curso", cliente.curso);
+            cmd.Parameters.AddWithValue("@dias", cliente.dias);
+            cmd.Parameters.AddWithValue("@multa", cliente.multa);
+         
+
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                Console.WriteLine("Erro na inserção de Clientes...");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+
+        //Método para Atualizar dados na tabela de clientes
+        public void Update (MODEL.Clientes cliente)
+        {
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "UPDATE Clientes SET nome=@nome, curso=@curso, dias=@dias, multa=@multa ";
+                   sql += " WHERE id=@id";
+
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", cliente.id); 
+            cmd.Parameters.AddWithValue("@nome", cliente.nome);
+            cmd.Parameters.AddWithValue("@curso", cliente.curso);
+            cmd.Parameters.AddWithValue("@dias", cliente.dias);
+            cmd.Parameters.AddWithValue("@multa", cliente.multa);
+
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                Console.WriteLine("Erro na atualização de Clientes...");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+        }
+
+        //Método para remover Cliente
+        public void Delete (int idCliente)
+        {
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "DELETE FROM Clientes WHERE id=@id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", idCliente);
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery(); 
+            }
+            catch
+            {
+                Console.WriteLine("Erro remoção de Clientes..."); 
+            }
+            finally
+            {
+                conexao.Close(); 
+            }
+        }
+
+
     }
 }
