@@ -132,7 +132,7 @@
             this.txtAutor.Location = new System.Drawing.Point(434, 163);
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.Size = new System.Drawing.Size(415, 34);
-            this.txtAutor.TabIndex = 8;
+            this.txtAutor.TabIndex = 9;
             // 
             // txtEditora
             // 
@@ -140,7 +140,7 @@
             this.txtEditora.Location = new System.Drawing.Point(434, 116);
             this.txtEditora.Name = "txtEditora";
             this.txtEditora.Size = new System.Drawing.Size(310, 34);
-            this.txtEditora.TabIndex = 9;
+            this.txtEditora.TabIndex = 8;
             // 
             // txtValor
             // 
@@ -167,51 +167,56 @@
             this.btnInserir.TabIndex = 12;
             this.btnInserir.Text = "&Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(262, 347);
+            this.btnEditar.Location = new System.Drawing.Point(258, 347);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(108, 46);
             this.btnEditar.TabIndex = 13;
             this.btnEditar.Text = "&Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnRemover
             // 
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(418, 347);
+            this.btnRemover.Location = new System.Drawing.Point(410, 347);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(126, 46);
+            this.btnRemover.Size = new System.Drawing.Size(144, 46);
             this.btnRemover.TabIndex = 14;
             this.btnRemover.Text = "&Remover";
             this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(592, 347);
+            this.btnCancelar.Location = new System.Drawing.Point(598, 347);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(136, 46);
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGravar
             // 
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGravar.Location = new System.Drawing.Point(776, 347);
+            this.btnGravar.Location = new System.Drawing.Point(778, 347);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(108, 46);
             this.btnGravar.TabIndex = 16;
             this.btnGravar.Text = "&Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(932, 347);
+            this.btnVoltar.Location = new System.Drawing.Point(930, 347);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(108, 46);
             this.btnVoltar.TabIndex = 17;
@@ -228,6 +233,7 @@
             this.dgvLivros.RowTemplate.Height = 24;
             this.dgvLivros.Size = new System.Drawing.Size(1010, 178);
             this.dgvLivros.TabIndex = 18;
+            this.dgvLivros.DoubleClick += new System.EventHandler(this.dgvLivros_DoubleClick);
             // 
             // frmLivros
             // 
