@@ -16,6 +16,20 @@ namespace BIBLIOTECA.CAMADAS.BLL
             return dalLivro.Select(); 
         }
 
+        public List<MODEL.Livros> SelectByID(int id)
+        {
+            DAL.Livros dalLivro = new DAL.Livros();
+            ///... verificações e regras de negócios
+            return dalLivro.SelectByID(id); 
+        }
+
+        public List<MODEL.Livros> SelectByTitulo(string titulo)
+        {
+            DAL.Livros dalLivro = new DAL.Livros();
+            ///... verificações e regras de negócios
+            return dalLivro.SelectByTitulo(titulo); 
+        }
+
         public void Insert (MODEL.Livros livro)
         {
             DAL.Livros dalLivro = new DAL.Livros();

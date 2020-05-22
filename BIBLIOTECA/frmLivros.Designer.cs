@@ -47,14 +47,23 @@
             this.btnGravar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.dgvLivros = new System.Windows.Forms.DataGridView();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.gpbPesquisa = new System.Windows.Forms.GroupBox();
+            this.rdbTodos = new System.Windows.Forms.RadioButton();
+            this.rdbID = new System.Windows.Forms.RadioButton();
+            this.rdbTitulo = new System.Windows.Forms.RadioButton();
+            this.lblFiltrar = new System.Windows.Forms.Label();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.btnFiltrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivros)).BeginInit();
+            this.gpbPesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(386, 27);
+            this.label1.Location = new System.Drawing.Point(172, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 29);
             this.label1.TabIndex = 0;
@@ -64,7 +73,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(348, 74);
+            this.label2.Location = new System.Drawing.Point(134, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 29);
             this.label2.TabIndex = 1;
@@ -74,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(332, 121);
+            this.label3.Location = new System.Drawing.Point(118, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 29);
             this.label3.TabIndex = 2;
@@ -84,7 +93,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(353, 168);
+            this.label4.Location = new System.Drawing.Point(139, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 29);
             this.label4.TabIndex = 3;
@@ -94,7 +103,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(353, 215);
+            this.label5.Location = new System.Drawing.Point(139, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 29);
             this.label5.TabIndex = 4;
@@ -104,7 +113,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(315, 262);
+            this.label6.Location = new System.Drawing.Point(101, 253);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 29);
             this.label6.TabIndex = 5;
@@ -113,7 +122,7 @@
             // lblID
             // 
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(434, 27);
+            this.lblID.Location = new System.Drawing.Point(220, 18);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(147, 29);
             this.lblID.TabIndex = 6;
@@ -121,7 +130,7 @@
             // txtTitulo
             // 
             this.txtTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitulo.Location = new System.Drawing.Point(434, 69);
+            this.txtTitulo.Location = new System.Drawing.Point(220, 60);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(415, 34);
             this.txtTitulo.TabIndex = 7;
@@ -129,7 +138,7 @@
             // txtAutor
             // 
             this.txtAutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAutor.Location = new System.Drawing.Point(434, 163);
+            this.txtAutor.Location = new System.Drawing.Point(220, 154);
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.Size = new System.Drawing.Size(415, 34);
             this.txtAutor.TabIndex = 9;
@@ -137,7 +146,7 @@
             // txtEditora
             // 
             this.txtEditora.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditora.Location = new System.Drawing.Point(434, 116);
+            this.txtEditora.Location = new System.Drawing.Point(220, 107);
             this.txtEditora.Name = "txtEditora";
             this.txtEditora.Size = new System.Drawing.Size(310, 34);
             this.txtEditora.TabIndex = 8;
@@ -145,7 +154,7 @@
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Location = new System.Drawing.Point(434, 210);
+            this.txtValor.Location = new System.Drawing.Point(220, 201);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(211, 34);
             this.txtValor.TabIndex = 10;
@@ -153,7 +162,7 @@
             // txtSituacao
             // 
             this.txtSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSituacao.Location = new System.Drawing.Point(434, 257);
+            this.txtSituacao.Location = new System.Drawing.Point(220, 248);
             this.txtSituacao.Name = "txtSituacao";
             this.txtSituacao.Size = new System.Drawing.Size(50, 34);
             this.txtSituacao.TabIndex = 11;
@@ -161,7 +170,7 @@
             // btnInserir
             // 
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Location = new System.Drawing.Point(106, 347);
+            this.btnInserir.Location = new System.Drawing.Point(106, 398);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(108, 46);
             this.btnInserir.TabIndex = 12;
@@ -172,7 +181,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(258, 347);
+            this.btnEditar.Location = new System.Drawing.Point(249, 398);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(108, 46);
             this.btnEditar.TabIndex = 13;
@@ -183,7 +192,7 @@
             // btnRemover
             // 
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(410, 347);
+            this.btnRemover.Location = new System.Drawing.Point(392, 398);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(144, 46);
             this.btnRemover.TabIndex = 14;
@@ -194,7 +203,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(598, 347);
+            this.btnCancelar.Location = new System.Drawing.Point(571, 398);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(136, 46);
             this.btnCancelar.TabIndex = 15;
@@ -205,7 +214,7 @@
             // btnGravar
             // 
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGravar.Location = new System.Drawing.Point(778, 347);
+            this.btnGravar.Location = new System.Drawing.Point(742, 398);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(108, 46);
             this.btnGravar.TabIndex = 16;
@@ -216,7 +225,7 @@
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(930, 347);
+            this.btnVoltar.Location = new System.Drawing.Point(1067, 398);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(108, 46);
             this.btnVoltar.TabIndex = 17;
@@ -227,21 +236,117 @@
             // dgvLivros
             // 
             this.dgvLivros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLivros.Location = new System.Drawing.Point(78, 434);
+            this.dgvLivros.Location = new System.Drawing.Point(106, 485);
             this.dgvLivros.Name = "dgvLivros";
             this.dgvLivros.RowHeadersWidth = 51;
             this.dgvLivros.RowTemplate.Height = 24;
-            this.dgvLivros.Size = new System.Drawing.Size(1010, 178);
+            this.dgvLivros.Size = new System.Drawing.Size(1071, 178);
             this.dgvLivros.TabIndex = 18;
             this.dgvLivros.DoubleClick += new System.EventHandler(this.dgvLivros_DoubleClick);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Location = new System.Drawing.Point(885, 398);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(147, 46);
+            this.btnPesquisar.TabIndex = 19;
+            this.btnPesquisar.Text = "&Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // gpbPesquisa
+            // 
+            this.gpbPesquisa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gpbPesquisa.Controls.Add(this.btnFiltrar);
+            this.gpbPesquisa.Controls.Add(this.txtFiltro);
+            this.gpbPesquisa.Controls.Add(this.lblFiltrar);
+            this.gpbPesquisa.Controls.Add(this.rdbTitulo);
+            this.gpbPesquisa.Controls.Add(this.rdbID);
+            this.gpbPesquisa.Controls.Add(this.rdbTodos);
+            this.gpbPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbPesquisa.Location = new System.Drawing.Point(675, 18);
+            this.gpbPesquisa.Name = "gpbPesquisa";
+            this.gpbPesquisa.Size = new System.Drawing.Size(500, 296);
+            this.gpbPesquisa.TabIndex = 20;
+            this.gpbPesquisa.TabStop = false;
+            this.gpbPesquisa.Text = "Filtrar Dados";
+            this.gpbPesquisa.Visible = false;
+            this.gpbPesquisa.Enter += new System.EventHandler(this.gpbPesquisa_Enter);
+            // 
+            // rdbTodos
+            // 
+            this.rdbTodos.AutoSize = true;
+            this.rdbTodos.Checked = true;
+            this.rdbTodos.Location = new System.Drawing.Point(43, 33);
+            this.rdbTodos.Name = "rdbTodos";
+            this.rdbTodos.Size = new System.Drawing.Size(104, 33);
+            this.rdbTodos.TabIndex = 0;
+            this.rdbTodos.TabStop = true;
+            this.rdbTodos.Text = "&Todos";
+            this.rdbTodos.UseVisualStyleBackColor = true;
+            this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
+            // 
+            // rdbID
+            // 
+            this.rdbID.AutoSize = true;
+            this.rdbID.Location = new System.Drawing.Point(43, 81);
+            this.rdbID.Name = "rdbID";
+            this.rdbID.Size = new System.Drawing.Size(57, 33);
+            this.rdbID.TabIndex = 1;
+            this.rdbID.Text = "&ID";
+            this.rdbID.UseVisualStyleBackColor = true;
+            this.rdbID.CheckedChanged += new System.EventHandler(this.rdbID_CheckedChanged);
+            // 
+            // rdbTitulo
+            // 
+            this.rdbTitulo.AutoSize = true;
+            this.rdbTitulo.Location = new System.Drawing.Point(43, 129);
+            this.rdbTitulo.Name = "rdbTitulo";
+            this.rdbTitulo.Size = new System.Drawing.Size(95, 33);
+            this.rdbTitulo.TabIndex = 2;
+            this.rdbTitulo.Text = "Tit&ulo";
+            this.rdbTitulo.UseVisualStyleBackColor = true;
+            this.rdbTitulo.CheckedChanged += new System.EventHandler(this.rdbTitulo_CheckedChanged);
+            // 
+            // lblFiltrar
+            // 
+            this.lblFiltrar.Location = new System.Drawing.Point(38, 175);
+            this.lblFiltrar.Name = "lblFiltrar";
+            this.lblFiltrar.Size = new System.Drawing.Size(425, 39);
+            this.lblFiltrar.TabIndex = 3;
+            this.lblFiltrar.Visible = false;
+            // 
+            // txtFiltro
+            // 
+            this.txtFiltro.Location = new System.Drawing.Point(43, 230);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(420, 34);
+            this.txtFiltro.TabIndex = 4;
+            this.txtFiltro.Visible = false;
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Image = global::BIBLIOTECA.Properties.Resources.filtrar2;
+            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltrar.Location = new System.Drawing.Point(300, 45);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(163, 76);
+            this.btnFiltrar.TabIndex = 5;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // frmLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(194)))), ((int)(((byte)(243)))));
-            this.ClientSize = new System.Drawing.Size(1164, 706);
+            this.ClientSize = new System.Drawing.Size(1273, 706);
             this.ControlBox = false;
+            this.Controls.Add(this.gpbPesquisa);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.dgvLivros);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnGravar);
@@ -269,6 +374,8 @@
             this.Text = "Manter Livros";
             this.Load += new System.EventHandler(this.frmLivros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivros)).EndInit();
+            this.gpbPesquisa.ResumeLayout(false);
+            this.gpbPesquisa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +402,13 @@
         private System.Windows.Forms.Button btnGravar;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.DataGridView dgvLivros;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.GroupBox gpbPesquisa;
+        private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.TextBox txtFiltro;
+        private System.Windows.Forms.Label lblFiltrar;
+        private System.Windows.Forms.RadioButton rdbTitulo;
+        private System.Windows.Forms.RadioButton rdbID;
+        private System.Windows.Forms.RadioButton rdbTodos;
     }
 }

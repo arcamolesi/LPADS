@@ -152,5 +152,61 @@ namespace BIBLIOTECA
             dgvLivros.DataSource = bllLivro.Select();
             limparControles(); 
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            gpbPesquisa.Visible = !gpbPesquisa.Visible; 
+        }
+
+        private void rdbID_CheckedChanged(object sender, EventArgs e)
+        {
+            lblFiltrar.Text = "Informe o ID?";
+            txtFiltro.Text = null; 
+            lblFiltrar.Visible = true;
+            txtFiltro.Visible = true;
+            txtFiltro.Focus(); 
+        }
+
+        private void rdbTitulo_CheckedChanged(object sender, EventArgs e)
+        {
+            lblFiltrar.Text = "Informe o Título?";
+            txtFiltro.Text = string.Empty; 
+            lblFiltrar.Visible = true;
+            txtFiltro.Visible = true;
+            txtFiltro.Focus(); 
+        }
+
+        private void rdbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            lblFiltrar.Visible = false;
+            txtFiltro.Visible = false;
+
+            CAMADAS.BLL.Livros bllLivro = new CAMADAS.BLL.Livros();
+            List<CAMADAS.MODEL.Livros> lstLivros = new List<CAMADAS.MODEL.Livros>();
+            lstLivros = bllLivro.Select();
+            dgvLivros.DataSource = "";
+            dgvLivros.DataSource = lstLivros;
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            CAMADAS.BLL.Livros bllLivro = new CAMADAS.BLL.Livros();
+            List<CAMADAS.MODEL.Livros> lstLivros = new List<CAMADAS.MODEL.Livros>();
+            if (rdbTodos.Checked)
+                lstLivros = bllLivro.Select();
+            else if (rdbTitulo.Checked)
+                    lstLivros = bllLivro.SelectByTitulo(txtFiltro.Text);
+                 else { int id = Convert.ToInt32(txtFiltro.Text);
+                        lstLivros = bllLivro.SelectByID(id);
+                      }
+
+            dgvLivros.DataSource = "";
+            dgvLivros.DataSource = lstLivros; 
+        }
+
+        private void gpbPesquisa_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
