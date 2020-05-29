@@ -47,6 +47,39 @@ namespace BIBLIOTECA.CAMADAS.DAL
             return lstClientes; 
         }
 
+
+        public MODEL.Clientes SelectById(int id)
+        {
+            MODEL.Clientes cliente = new MODEL.Clientes(); 
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "SELECT * FROM Clientes WHERE id=@id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id); 
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+               if (dados.Read())
+                {
+                    cliente.id = Convert.ToInt32(dados["id"].ToString());
+                    cliente.nome = dados["nome"].ToString();
+                    cliente.curso = dados["curso"].ToString();
+                    cliente.dias = Convert.ToInt32(dados["dias"].ToString());
+                    cliente.multa = Convert.ToSingle(dados["multa"].ToString());
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Deu erro na consulta de Clientes por ID...");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return cliente;
+        }
+
         //Método para Inserir dados na tabela de clientes
         public void Insert (MODEL.Clientes cliente)
         {
