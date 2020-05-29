@@ -51,6 +51,46 @@ namespace BIBLIOTECA.CAMADAS.DAL
             return lstEmprestimo;
         }
 
+
+        public List<MODEL.Emprestimo> SelectByID(int id)
+        {
+            List<MODEL.Emprestimo> lstEmprestimo = new List<MODEL.Emprestimo>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "SELECT * FROM Emprestimo WHERE id=@id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            try
+            {
+                conexao.Open();
+                SqlDataReader dados = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dados.Read())
+                {
+                    //preencher com dados do emprestimo
+                    CAMADAS.MODEL.Emprestimo emprestimo = new MODEL.Emprestimo();
+                    emprestimo.id = Convert.ToInt32(dados["id"].ToString());
+                    emprestimo.clienteID = Convert.ToInt32(dados["clienteID"].ToString());
+                    emprestimo.data = Convert.ToDateTime(dados["data"].ToString());
+
+                    //recuperar nome do cliente
+                    CAMADAS.DAL.Clientes dalCli = new Clientes();
+                    CAMADAS.MODEL.Clientes cliente = dalCli.SelectById(emprestimo.clienteID);
+                    emprestimo.nomeCli = cliente.nome;
+
+                    lstEmprestimo.Add(emprestimo);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Deu erro na consulta de Emprestimo...");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return lstEmprestimo;
+        }
+
         //Método para Inserir dados na tabela de Emprestimo
         public void Insert(MODEL.Emprestimo emprestimo)
         {

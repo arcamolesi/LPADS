@@ -35,6 +35,12 @@ namespace BIBLIOTECA
             dtpData.Value = Convert.ToDateTime(DateTime.Now.ToShortDateString());
         }
 
+        private void limparItem()
+        {
+            lblItemID.Text = "-1";
+            dtpEntrega.Value = Convert.ToDateTime("1/1//1900");
+        }
+
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close(); 
