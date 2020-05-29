@@ -34,7 +34,9 @@ namespace BIBLIOTECA.CAMADAS.DAL
                     //recuperar nome do cliente
                     CAMADAS.DAL.Clientes dalCli = new Clientes();
                     CAMADAS.MODEL.Clientes cliente = dalCli.SelectById(emprestimo.clienteID);
-                    emprestimo.nomeCli = cliente.nome; 
+                    emprestimo.nomeCli = cliente.nome;
+
+                    lstEmprestimo.Add(emprestimo); 
                 }
             }
             catch

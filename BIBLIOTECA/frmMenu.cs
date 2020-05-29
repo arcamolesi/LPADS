@@ -58,5 +58,12 @@ namespace BIBLIOTECA
         {
             toolStripStatusLabel3.Text = DateTime.Now.ToLongTimeString(); 
         }
+
+        private void empréstimoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEmprestimo frmEmp = new frmEmprestimo();
+            frmEmp.MdiParent = this;
+            frmEmp.Show(); 
+        }
     }
 }
