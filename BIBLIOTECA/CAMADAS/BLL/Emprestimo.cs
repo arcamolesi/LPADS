@@ -14,9 +14,11 @@ namespace BIBLIOTECA.CAMADAS.BLL
             return dalEmp.Select(); 
         }
 
-        public void  Insert(MODEL.Emprestimo emprestimo)
+        public void Insert(MODEL.Emprestimo emprestimo)
         {
+            
             DAL.Emprestimo dalEmp = new DAL.Emprestimo();
+
             dalEmp.Insert(emprestimo);
         }
 

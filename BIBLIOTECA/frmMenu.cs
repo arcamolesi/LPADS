@@ -65,5 +65,11 @@ namespace BIBLIOTECA
             frmEmp.MdiParent = this;
             frmEmp.Show(); 
         }
+
+        private void livrosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //chamada do relatório de livros. 
+            RELATORIOS.RelGerais.relLivro(); 
+        }
     }
 }

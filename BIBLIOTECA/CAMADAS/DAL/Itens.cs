@@ -97,11 +97,11 @@ namespace BIBLIOTECA.CAMADAS.DAL
         public void Insert(MODEL.Itens item)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "INSERT INTO Itens VALUES (@emprestimoID. @livroID, @entrega);";
+            string sql = "INSERT INTO Itens VALUES (@emprestimoID, @livroID, @entrega);";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@emprestimoID", item.emprestimoID);
             cmd.Parameters.AddWithValue("@livroID", item.livroID);
-            cmd.Parameters.AddWithValue("@entrega",item.entrega);
+            cmd.Parameters.AddWithValue("@entrega", item.entrega);
             try
             {
                 conexao.Open();

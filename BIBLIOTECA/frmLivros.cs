@@ -102,8 +102,8 @@ namespace BIBLIOTECA
             {
                 CAMADAS.MODEL.Livros livro = new CAMADAS.MODEL.Livros();
                 livro.id = Convert.ToInt32(lblID.Text);
-                livro.titulo = txtTitulo.Text;
-                livro.editora = txtEditora.Text;
+                livro.titulo = txtTitulo.Text.Trim();
+                livro.editora = txtEditora.Text.Trim();
                 livro.autor = txtAutor.Text;
                 livro.valor = Convert.ToSingle(txtValor.Text);
                 livro.situacao = Convert.ToInt32(txtSituacao.Text);

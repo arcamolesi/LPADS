@@ -46,8 +46,11 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.livrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -123,14 +126,16 @@
             // 
             // geraisToolStripMenuItem
             // 
+            this.geraisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.livrosToolStripMenuItem1});
             this.geraisToolStripMenuItem.Name = "geraisToolStripMenuItem";
-            this.geraisToolStripMenuItem.Size = new System.Drawing.Size(219, 36);
+            this.geraisToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.geraisToolStripMenuItem.Text = "Gerais";
             // 
             // estatisticosToolStripMenuItem
             // 
             this.estatisticosToolStripMenuItem.Name = "estatisticosToolStripMenuItem";
-            this.estatisticosToolStripMenuItem.Size = new System.Drawing.Size(219, 36);
+            this.estatisticosToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.estatisticosToolStripMenuItem.Text = "Estatisticos";
             // 
             // sobreToolStripMenuItem
@@ -187,6 +192,17 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // livrosToolStripMenuItem1
+            // 
+            this.livrosToolStripMenuItem1.Name = "livrosToolStripMenuItem1";
+            this.livrosToolStripMenuItem1.Size = new System.Drawing.Size(224, 36);
+            this.livrosToolStripMenuItem1.Text = "Livros";
+            this.livrosToolStripMenuItem1.Click += new System.EventHandler(this.livrosToolStripMenuItem1_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -208,6 +224,7 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +249,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripMenuItem livrosToolStripMenuItem1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
