@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BIBLIOTECA.RELATORIOS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -70,6 +71,13 @@ namespace BIBLIOTECA
         {
             //chamada do relatório de livros. 
             RELATORIOS.RelGerais.relLivro(); 
+        }
+
+        private void estatisticosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelEmp frmRemp = new frmRelEmp();
+            frmRemp.MdiParent = this;
+            frmRemp.Show(); 
         }
     }
 }

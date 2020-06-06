@@ -35,3 +35,8 @@ D:\OneDrive - Fundação Educacional do Município de Assis\Aulas2020\LPADS\aula
 D:\OneDrive - Fundação Educacional do Município de Assis\Aulas2020\LPADS\aula\2020\BIBLIOTECA\BIBLIOTECA\obj\Debug\BIBLIOTECA.exe
 D:\OneDrive - Fundação Educacional do Município de Assis\Aulas2020\LPADS\aula\2020\BIBLIOTECA\BIBLIOTECA\obj\Debug\BIBLIOTECA.pdb
 D:\OneDrive - Fundação Educacional do Município de Assis\Aulas2020\LPADS\aula\2020\BIBLIOTECA\BIBLIOTECA\obj\Debug\BIBLIOTECA.frmEmprestimo.resources
+D:\OneDrive - Fundação Educacional do Município de Assis\Aulas2020\LPADS\aula\2020\BIBLIOTECA\BIBLIOTECA\obj\Debug\BIBLIOTECA.csproj.ResolveComReference.cache
+D:\OneDrive - Fundação Educacional do Município de Assis\Aulas2020\LPADS\aula\2020\BIBLIOTECA\BIBLIOTECA\obj\Debug\BIBLIOTECA.RELATORIOS.frmRelEmp.resources
+D:\OneDrive - Fundação Educacional do Município de Assis\Aulas2020\LPADS\aula\2020\BIBLIOTECA\BIBLIOTECA\bin\Debug\EPPlus.dll
+D:\OneDrive - Fundação Educacional do Município de Assis\Aulas2020\LPADS\aula\2020\BIBLIOTECA\BIBLIOTECA\bin\Debug\EPPlus.xml
+D:\OneDrive - Fundação Educacional do Município de Assis\Aulas2020\LPADS\aula\2020\BIBLIOTECA\BIBLIOTECA\obj\Debug\BIBLIOTECA.csproj.CopyComplete

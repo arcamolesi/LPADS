@@ -38,6 +38,7 @@
             this.devoluçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.geraisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.estatisticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,6 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.livrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -132,11 +132,19 @@
             this.geraisToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.geraisToolStripMenuItem.Text = "Gerais";
             // 
+            // livrosToolStripMenuItem1
+            // 
+            this.livrosToolStripMenuItem1.Name = "livrosToolStripMenuItem1";
+            this.livrosToolStripMenuItem1.Size = new System.Drawing.Size(165, 36);
+            this.livrosToolStripMenuItem1.Text = "Livros";
+            this.livrosToolStripMenuItem1.Click += new System.EventHandler(this.livrosToolStripMenuItem1_Click);
+            // 
             // estatisticosToolStripMenuItem
             // 
             this.estatisticosToolStripMenuItem.Name = "estatisticosToolStripMenuItem";
             this.estatisticosToolStripMenuItem.Size = new System.Drawing.Size(224, 36);
             this.estatisticosToolStripMenuItem.Text = "Estatisticos";
+            this.estatisticosToolStripMenuItem.Click += new System.EventHandler(this.estatisticosToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -191,13 +199,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // livrosToolStripMenuItem1
-            // 
-            this.livrosToolStripMenuItem1.Name = "livrosToolStripMenuItem1";
-            this.livrosToolStripMenuItem1.Size = new System.Drawing.Size(224, 36);
-            this.livrosToolStripMenuItem1.Text = "Livros";
-            this.livrosToolStripMenuItem1.Click += new System.EventHandler(this.livrosToolStripMenuItem1_Click);
             // 
             // errorProvider1
             // 
