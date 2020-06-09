@@ -18,6 +18,9 @@ namespace BIBLIOTECA.RELATORIOS
 
             string pasta = Funcoes.deretorioPasta();
             string arquivo = pasta + @"\RelLivros_"+DateTime.Now.ToShortDateString().Replace("/","_")+ "_" + DateTime.Now.ToLongTimeString().Replace(":","_")+".html";
+            string arquivoPDF = pasta + @"\RelLivros_" + DateTime.Now.ToShortDateString().Replace("/", "_") + "_" + DateTime.Now.ToLongTimeString().Replace(":", "_") + ".pdf";
+
+
             StreamWriter sw = new StreamWriter(arquivo);
             using (sw)
             {
@@ -102,6 +105,10 @@ namespace BIBLIOTECA.RELATORIOS
                 sw.WriteLine("</html>");
             }
             System.Diagnostics.Process.Start(arquivo);
+
+            var htmlToPdf = new NReco.PdfGenerator.HtmlToPdfConverter();
+            htmlToPdf.CustomWkHtmlArgs = "--dpi 300";
+            htmlToPdf.GeneratePdfFromFile(arquivo, null, arquivoPDF);
         }
 
 
